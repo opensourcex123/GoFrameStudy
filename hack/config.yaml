@@ -1,0 +1,8 @@
+gfcli:
+  # dao生成
+  gen:
+    dao:
+      - link:            "mysql:root:123456@tcp(127.0.0.1:3306)/second_tx"
+        descriptionTag:  true
+        noModelComment:  true
+        jsonCase: "Snake"

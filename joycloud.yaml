@@ -2,7 +2,7 @@ stages:
   - pipeline: 流水线-1
     steps:
       - name: test
-        module: image
+        module: docker
         image: go:1.18
         commands:
           - go env -w GO111MODULE=on

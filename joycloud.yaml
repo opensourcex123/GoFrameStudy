@@ -2,7 +2,8 @@ stages:
   - pipeline: 流水线-1
     steps:
       - name: test
-        module: ssh
+        module: image
+        image: go:1.18
         settings:
           instance:
             -14407ca5-96f7-49f9-867d-3d11cdb327e4
@@ -10,4 +11,5 @@ stages:
             - go env -w GO111MODULE=on
             - go env -w GOPROXY=https://goproxy.cn,direct
             - CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -tags=jsoniter -o main ./main.go
+            - ls
             - go run main.go

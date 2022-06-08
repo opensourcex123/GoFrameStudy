@@ -3,7 +3,7 @@ stages:
     steps:
       - name: test
         module: docker
-        image: go:1.18
+        image: go
         commands:
           - go env -w GO111MODULE=on
           - go env -w GOPROXY=https://goproxy.cn,direct
